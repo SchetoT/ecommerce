@@ -29,7 +29,7 @@ public class ProductService {
 
     public Product updateProduct(Long id, String title, String description, Integer stock, Double price) {
         Product product = productRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Product not found")); // Considera usar una excepción más específica
+                .orElseThrow(() -> new RuntimeException("Product not found"));
         product.setTitle(title);
         product.setDescription(description);
         product.setStock(stock);
